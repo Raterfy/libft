@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:27:12 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/27 19:15:35 by robhak           ###   ########.fr       */
+/*   Updated: 2023/04/27 19:36:41 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
    (sans compter le caractère nul) */
 size_t	ft_strlen(const char *s)
 {
-	size_t	len;
+	const char	*len;
 
-	len = 0;
-	while (s[len] != '\0')
+	len = s;
+	while (len != '\0')
 		len++;
-	return (len);
+	return (len - s);
 }
