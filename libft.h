@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 11:46:32 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/28 11:57:41 by robhak           ###   ########.fr       */
+/*   Updated: 2023/04/28 12:00:47 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 
 #endif
