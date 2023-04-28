@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:00:18 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/27 18:51:11 by robhak           ###   ########.fr       */
+/*   Updated: 2023/04/28 14:14:27 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 's' sur le descripteur de fichier donné.*/
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	len;
-
 	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
