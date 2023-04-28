@@ -6,16 +6,21 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:13:33 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/26 21:13:40 by robhak           ###   ########.fr       */
+/*   Updated: 2023/04/28 11:43:41 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*La fonction ft_lstmap prend en entrée une liste chaînée lst et une fonction f qui prend en entrée un élément de la liste 
-et retourne un nouvel élément de liste. La fonction ft_lstmap applique la fonction f à chaque élément de la liste lst pour créer une nouvelle liste 
-chaînée qui contient les éléments retournés par f. La fonction ft_lstmap retourne un pointeur sur le début de la nouvelle liste chaînée. 
-Si l'allocation de mémoire échoue à un moment donné, la fonction ft_lstmap doit supprimer la liste chaînée en cours de création et retourner NULL.*/
+/*La fonction ft_lstmap prend en entrée une liste chaînée 
+lst et une fonction f qui prend en entrée un élément de la liste 
+et retourne un nouvel élément de liste. La fonction ft_lstmap 
+applique la fonction f à chaque élément de la liste lst pour 
+créer une nouvelle liste chaînée qui contient les éléments retournés par f. 
+La fonction ft_lstmap retourne un pointeur sur le début de 
+la nouvelle liste chaînée. Si l'allocation de mémoire échoue à un moment donné, 
+la fonction ft_lstmap doit supprimer la liste chaînée 
+en cours de création et retourner NULL.*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;

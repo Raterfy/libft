@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:56:37 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/26 20:57:16 by robhak           ###   ########.fr       */
+/*   Updated: 2023/04/28 11:40:22 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 /*Cette fonction applique la fonction 'f' à chaque caractère de la chaîne 's' 
   en passant l'index de chaque caractère en tant que premier 
-  argument, et crée une nouvelle chaîne résultant des applications successives de 'f' 
-  à l'aide de malloc(3).
+  argument, et crée une nouvelle chaîne résultant 
+  des applications successives de 'f' à l'aide de malloc(3).
 */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

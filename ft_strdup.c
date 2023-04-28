@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:26:58 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/25 13:26:59 by robhak           ###   ########.fr       */
+/*   Updated: 2023/04/28 11:07:19 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s)
 	char	*new_str;
 	size_t	len;
 
-	len = strlen(s) + 1;
+	len = ft_strlen(s) + 1;
 	new_str = malloc(len);
 	if (new_str == NULL)
 		return (NULL);
