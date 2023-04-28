@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:27:05 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/25 13:27:06 by robhak           ###   ########.fr       */
+/*   Updated: 2023/04/28 18:33:23 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,22 @@
    par un caractère nul */
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	dstlen;
-	size_t	srclen;
-	size_t	remaining;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
 
-	dstlen = ft_strlen(dest);
-	srclen = ft_strlen(src);
-	if (dstlen >= size)
-		return (size + srclen);
-	remaining = size - dstlen - 1;
-	if (srclen < remaining)
-		ft_memcpy(dest + dstlen, src, srclen + 1);
-	else
+	if (!dest || !src)
+		return (0);
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	if (size <= dest_len)
+		return (size + src_len);
+	i = 0;
+	while (src[i] && dest_len + i < size - 1)
 	{
-		ft_memcpy(dest + dstlen, src, remaining);
-		dest[size - 1] = '\0';
+		dest[dest_len + i] = src[i];
+		i++;
 	}
-	return (dstlen + srclen);
+	dest[dest_len + i] = '\0';
+	return (dest_len + src_len);
 }

@@ -52,13 +52,13 @@ BNS_OBJS				= $(BNS_SRCS:%.c=%.o)
 FLAGS					= -Wall -Wextra -Werror
 
 $(NAME)		:	$(OBJS)
-			gcc $(FLAGS) -c $(SRCS) -I./
+			cc $(FLAGS) -c $(SRCS) -I./
 			ar rc $(NAME) $(OBJS)
 
 all	:	$(NAME)
 
 bonus	:	$(NAME)
-		gcc $(FLAGS) -c $(BNS_SRCS) -I./
+		cc $(FLAGS) -c $(BNS_SRCS) -I./
 		ar rc $(NAME) $(BNS_OBJS)
 
 clean	:
@@ -71,6 +71,8 @@ re	:	fclean all
 
 .PHONY	:	all clean fclean re
 
+so:
+	gcc -Wall -Wextra -Werror -fPIC $(SRCS) $(BNS_SRCS) -shared -o libft.so -nostartfiles
 
 #NAME = libft.a
 #Définit le nom de la bibliothèque statique qui sera générée.
