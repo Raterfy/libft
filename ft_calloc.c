@@ -15,19 +15,18 @@
 /* Alloue un bloc de mémoire de taille nmemb * size, 
    initialise chaque octet à zéro, renvoie un pointeur vers le début du bloc 
    de mémoire alloué ou NULL si l'allocation a échoué */
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*ptr;
-	size_t	size_max;
 
-	size_max = (size_t)-1;
-	if (size_max / count < size)
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*mem;
+	size_t	total_size;
+
+	total_size = nmemb * size;
+	if (total_size == 0)
 		return (NULL);
-	if (size == 0 || count == 0)
+	mem = malloc(total_size);
+	if (!mem)
 		return (NULL);
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_memset(ptr, 0, count * size);
-	return (ptr);
+	ft_memset(mem, 0, total_size);
+	return (mem);
 }
