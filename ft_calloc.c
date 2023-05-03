@@ -18,15 +18,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*mem;
+	void	*memory;
 	size_t	total_size;
 
 	total_size = nmemb * size;
 	if (size != 0 && total_size / size != nmemb)
 		return (NULL);
-	mem = malloc(total_size);
-	if (!mem)
+	memory = malloc(total_size);
+	if (!memory)
 		return (NULL);
-	ft_memset(mem, 0, total_size);
-	return (mem);
+	ft_memset(memory, 0, total_size);
+	return (memory);
 }
