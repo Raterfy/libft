@@ -72,7 +72,7 @@ re	:	fclean all
 .PHONY	:	all clean fclean re
 
 #so:
-#	gcc -Wall -Wextra -Werror -fPIC $(SRCS) $(BNS_SRCS) -shared -o libft.so -nostartfiles
+#	cc -Wall -Wextra -Werror -fPIC $(SRCS) $(BNS_SRCS) -shared -o libft.so -nostartfiles
 
 #NAME = libft.a
 #Définit le nom de la bibliothèque statique qui sera générée.
