@@ -14,25 +14,25 @@
 
 /* Convertit la chaîne de caractères str en un entier de type int,
    renvoie la valeur de l'entier ou 0 si la conversion n'a pas réussi */
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	result;
 	int	sign;
 
 	result = 0;
 	sign = 1;
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-		str++;
-	if (*str == '+' || *str == '-')
+	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
 	{
-		if (*str == '-')
+		if (*nptr == '-')
 			sign = -1;
-		str++;
+		nptr++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		result = result * 10 + (*str - '0');
-		str++;
+		result = result * 10 + (*nptr - '0');
+		nptr++;
 	}
 	return (sign * result);
 }
