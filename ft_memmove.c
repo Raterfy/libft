@@ -14,7 +14,7 @@
 
 /* Copie n octets de la zone mémoire src dans la zone mémoire dest,
    les deux zones peuvent se chevaucher */
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*dest_copy;
 	const unsigned char	*src_copy;
