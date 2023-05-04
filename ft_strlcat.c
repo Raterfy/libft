@@ -15,24 +15,24 @@
 /* Concatène la chaîne src à la fin de la chaîne dest,
    en s'assurant que la chaîne résultante est toujours terminée 
    par un caractère nul */
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dest_len;
 	size_t	src_len;
 	size_t	i;
 
-	if (!dest || !src)
+	if (!dst || !src)
 		return (0);
-	dest_len = ft_strlen(dest);
+	dest_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (size <= dest_len)
 		return (size + src_len);
 	i = 0;
 	while (src[i] && dest_len + i < size - 1)
 	{
-		dest[dest_len + i] = src[i];
+		dst[dest_len + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
+	dst[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
