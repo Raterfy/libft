@@ -15,7 +15,6 @@
 /* Alloue un bloc de mémoire de taille nmemb * size, 
    initialise chaque octet à zéro, renvoie un pointeur vers le début du bloc 
    de mémoire alloué ou NULL si l'allocation a échoué */
-
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*memory;

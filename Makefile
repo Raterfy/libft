@@ -69,7 +69,7 @@ fclean	:	clean
 
 re	:	fclean all
 
-.PHONY	:	all clean fclean re
+.PHONY	:	all bonus clean fclean re
 
 #so:
 #	cc -Wall -Wextra -Werror -fPIC $(SRCS) $(BNS_SRCS) -shared -o libft.so -nostartfiles
@@ -136,39 +136,3 @@ re	:	fclean all
 #L'utilisation de .PHONY est utile pour éviter les erreurs et les conflits avec les noms de fichiers réels. 
 #Par exemple, si vous avez un fichier nommé "clean" dans votre répertoire de travail, sans la commande .PHONY, 
 #Make tentera de construire le fichier "clean" plutôt que d'exécuter la règle de nettoyage correspondante.
-
-#####################################################################################################################################################
-#####################################################################################################################################################
-
-#$(NAME) : $(OBJS) : cette ligne définit une règle pour la création de la bibliothèque statique $(NAME) 
-#en fonction des objets contenus dans $(OBJS).
-
-#gcc $(FLAGS) -c $(SRCS) -I./ : cette commande permet de compiler les fichiers sources contenus dans $(SRCS) 
-#en objets en utilisant les flags définis dans $(FLAGS) et en ajoutant le répertoire courant (-I./) 
-#à la liste des répertoires d'inclusion pour la recherche des fichiers d'en-tête.
-
-#ar rc $(NAME) $(OBJS) : cette commande crée la bibliothèque statique $(NAME) 
-#en utilisant la commande ar (archiver) et y ajoute les fichiers objets contenus dans $(OBJS).
-
-#all : $(NAME) : cette ligne définit une règle all qui dépend de $(NAME). En d'autres termes, 
-#la commande make all construira la bibliothèque statique $(NAME).
-
-#bonus : $(NAME) : cette ligne définit une règle bonus qui dépend de $(NAME). 
-#Elle est utilisée pour construire des fonctions bonus supplémentaires.
-
-#gcc $(FLAGS) -c $(BNS_SRCS) -I./ : cette commande est similaire à celle utilisée pour compiler les sources normales. 
-#Elle compile les fichiers sources bonus contenus dans $(BNS_SRCS) en objets.
-
-#ar rc $(NAME) $(BNS_OBJS) : cette commande ajoute les fichiers objets bonus contenus dans $(BNS_OBJS) 
-#à la bibliothèque statique $(NAME).
-
-#clean : : cette ligne définit une règle clean qui supprime tous les fichiers objets.
-
-#rm -f $(OBJS) $(BNS_OBJS) : cette commande supprime les fichiers objets contenus dans $(OBJS) et $(BNS_OBJS).
-
-#fclean : clean : cette ligne définit une règle fclean qui supprime tous les fichiers objets et la bibliothèque statique $(NAME).
-
-#rm -f $(NAME) : cette commande supprime la bibliothèque statique $(NAME).
-
-#re : fclean all : cette ligne définit une règle re qui supprime tous les fichiers objets et 
-#la bibliothèque statique $(NAME) avant de reconstruire la bibliothèque statique $(NAME).

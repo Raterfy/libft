@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:56:37 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/28 11:40:22 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/05 11:19:32 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (i < len)
 	{
-		result[i] = f(i, s[i]);
+		result[i] = (*f)(i, s[i]);
 		i++;
 	}
 	result[i] = '\0';
