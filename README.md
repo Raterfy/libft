@@ -1,5 +1,9 @@
 # libft
-Library for 42 common core in C
+Library for 42 common core in C  
+
+The objectif of the libft:  
+This project is about understanding the way these functions work,
+implementing and learning to use them.
 
 Excellent tutoriel en français des listes chaînées:  
 https://www.youtube.com/watch?v=t_9Zz58PzxY  
