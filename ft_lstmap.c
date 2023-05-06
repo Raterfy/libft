@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:13:33 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/28 11:43:41 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 01:00:46 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_node;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	new_lst = NULL;
 	while (lst)
