@@ -6,12 +6,31 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:26:22 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/28 11:37:03 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 01:48:08 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
+** Nom de la fonction: ft_split
+** Paramètre(s): char const *s, char c
+** Valeur de retour: char **
+** Description: Cette fonction découpe une chaîne de caractères 
+	selon un caractère délimiteur et renvoie un tableau de chaînes 
+	de caractères résultant de la découpe.
+** Elle prend en paramètre la chaîne à découper et le caractère délimiteur.
+** Elle utilise les fonctions malloc, free et ft_substr 
+	pour allouer et libérer la mémoire.
+** Elle renvoie NULL si la chaîne est nulle ou si l'allocation échoue.
+** Elle compte le nombre de mots dans la chaîne avec la fonction ft_count_words.
+** Elle calcule la longueur de chaque mot avec la fonction ft_wordlen.
+** Elle libère le tableau en cas d'erreur avec la fonction free_strs.
+** Exemple(s):
+** ft_split("Hello world!", ' '); // renvoie ["Hello", "world!", NULL]
+** ft_split("Bonjour,comment allez-vous?", ','); 
+	// renvoie ["Bonjour", "comment allez-vous?", NULL]
+** ft_split("", 'a'); // renvoie [NULL]
+*/
 static int	ft_wordlen(char const *s, char c)
 {
 	int	len;
@@ -25,7 +44,7 @@ static int	ft_wordlen(char const *s, char c)
 	return (len);
 }
 
-static int	count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	count;
 
@@ -62,8 +81,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	count = count_words(s, c);
-	strs = (char **)malloc(sizeof(char *) * (count + 1));
+	count = ft_count_words(s, c);
+	strs = malloc(sizeof(char *) * (count + 1));
 	if (!strs)
 		return (NULL);
 	strs[count] = NULL;
