@@ -6,14 +6,26 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:00:18 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/28 14:14:27 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 01:39:09 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Cette fonction écrit la chaîne de caractères 
-'s' sur le descripteur de fichier donné.*/
+/*
+** Nom de la fonction: ft_putstr_fd
+** Paramètre(s): char *s, int fd
+** Valeur de retour: void
+** Description: Cette fonction écrit une chaîne de caractères 
+	sur un descripteur de fichier.
+** Elle prend en paramètre la chaîne à écrire et le descripteur 
+	de fichier sur lequel écrire.
+** Elle utilise la fonction write pour écrire la chaîne.
+** Elle ne fait rien si la chaîne est nulle.
+** Exemple(s):
+** ft_putstr_fd("Hello", 1); // écrit "Hello" sur la sortie standard
+** ft_putstr_fd("World", 2); // écrit "World" sur la sortie d'erreur
+*/
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
