@@ -6,14 +6,25 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:08:26 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/28 11:43:57 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 01:04:00 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Cette fonction crée un nouveau maillon de liste et 
-l'initialise avec le contenu passé en paramètre.*/
+/*
+** Nom de la fonction: ft_lstnew
+** Paramètre(s): void *content
+** Valeur de retour: t_list *
+** Description: Cette fonction crée un nouvel élément d'une liste chaînée.
+** Elle prend en paramètre un pointeur sur le contenu de l'élément à créer.
+** Elle alloue de la mémoire pour l'élément avec la fonction malloc 
+	et y copie le contenu passé en paramètre.
+** Elle initialise le pointeur sur l'élément suivant à NULL.
+** Elle renvoie un pointeur sur le nouvel élément ou NULL si l'allocation échoue.
+** Exemple(s):
+** t_list *new = ft_lstnew("hello"); // new -> "hello" -> NULL
+*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;

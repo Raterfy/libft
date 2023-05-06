@@ -6,21 +6,36 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:13:33 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/07 01:00:46 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 01:01:53 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*La fonction ft_lstmap prend en entrée une liste chaînée 
-lst et une fonction f qui prend en entrée un élément de la liste 
-et retourne un nouvel élément de liste. La fonction ft_lstmap 
-applique la fonction f à chaque élément de la liste lst pour 
-créer une nouvelle liste chaînée qui contient les éléments retournés par f. 
-La fonction ft_lstmap retourne un pointeur sur le début de 
-la nouvelle liste chaînée. Si l'allocation de mémoire échoue à un moment donné, 
-la fonction ft_lstmap doit supprimer la liste chaînée 
-en cours de création et retourner NULL.*/
+/*
+** Nom de la fonction: ft_lstmap
+** Paramètre(s): t_list *lst, void *(*f)(void *), void (*del)(void *)
+** Valeur de retour: t_list *
+** Description: Cette fonction crée une nouvelle liste chaînée en appliquant 
+	une fonction f au contenu de chaque élément de la liste originale.
+** Elle prend en paramètre un pointeur sur le premier élément de la liste 
+	originale, un pointeur sur la fonction f et un pointeur sur une fonction del 
+	qui permet de libérer le contenu des éléments en cas d'erreur.
+** Elle vérifie si les paramètres sont valides, sinon elle renvoie NULL.
+** Elle alloue de la mémoire pour chaque nouvel élément avec la fonction 
+	ft_lstnew et y copie le résultat de l'application de f au contenu de l'élément 
+		correspondant de la liste originale.
+** Elle ajoute chaque nouvel élément à la fin de la nouvelle liste avec 
+	la fonction ft_lstadd_back.
+** Si l'allocation échoue, elle supprime et libère la mémoire de tous 
+	les éléments déjà créés avec la fonction ft_lstclear et renvoie NULL.
+** Elle renvoie un pointeur sur le premier élément de la nouvelle liste.
+** Exemple(s):
+** t_list *lst = ft_lstnew("hello");
+** ft_lstadd_back(&lst, ft_lstnew("world"));
+** t_list *new_lst = ft_lstmap(lst, &ft_strdup, &free); 
+	new_lst -> "hello" -> "world" -> NULL
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
