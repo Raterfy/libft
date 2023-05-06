@@ -6,14 +6,32 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:25:26 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/04 19:00:40 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 00:10:59 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Convertit la chaîne de caractères str en un entier de type int,
-   renvoie la valeur de l'entier ou 0 si la conversion n'a pas réussi */
+/*
+** Nom de la fonction: ft_atoi
+** Paramètre(s): const char *nptr
+** Valeur de retour: int
+** Description: Cette fonction convertit une chaîne 
+	de caractères en un nombre entier.
+** Si la chaîne commence par des espaces ou des 
+	caractères de contrôle, ils sont ignorés.
+** Si la chaîne commence par un signe '+' ou '-', 
+	il est pris en compte pour le signe du nombre.
+** Si la chaîne contient des caractères non numériques 
+	après les chiffres, ils sont ignorés.
+** Si la chaîne est vide ou ne contient pas 
+	de chiffres, la fonction renvoie 0.
+** Exemple(s):
+** ft_atoi("42") -> 42
+** ft_atoi("   -123") -> -123
+** ft_atoi("+3.14") -> 3
+** ft_atoi("abc") -> 0
+*/
 int	ft_atoi(const char *nptr)
 {
 	int	result;
