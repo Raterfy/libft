@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:26:06 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/07 01:18:36 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 20:27:35 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*dest_cpy;
 	const unsigned char	*src_cpy;
 
-	if (!dest && !src)
+	if (!dest || !src)
 		return (NULL);
 	dest_cpy = dest;
 	src_cpy = src;
