@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:26:22 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/07 01:48:08 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 01:58:55 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ static void	*free_strs(char **str)
 	return (NULL);
 }
 
+//strs[count] = NULL;parce que \0 n'est pas une valeur de pointeur valide
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;

@@ -6,17 +6,28 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:26:58 by robhak            #+#    #+#             */
-/*   Updated: 2023/04/28 11:07:19 by robhak           ###   ########.fr       */
+/*   Updated: 2023/05/07 02:04:55 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Duplique la chaîne de caractères str en allouant un bloc de mémoire 
-   suffisamment grand pour y stocker une copie de str, 
-   copie le contenu de str dans le bloc de mémoire alloué, 
-   renvoie un pointeur vers le début de ce bloc de mémoire ou NULL 
-   si l'allocation a échoué */
+/*
+** Nom de la fonction: ft_strdup
+** Paramètre(s): const char *s
+** Valeur de retour: char *
+** Description: Cette fonction alloue de la mémoire et copie la chaîne s 
+	dans cette mémoire.
+** Elle prend en paramètre la chaîne à dupliquer.
+** Elle renvoie un pointeur sur la nouvelle chaîne, 
+	ou NULL si l'allocation échoue.
+** Elle utilise les fonctions malloc, ft_strlen et ft_memcpy pour allouer, 
+	calculer la longueur et copier la chaîne.
+** Exemple(s):
+** ft_strdup("Hello"); // renvoie un pointeur sur une nouvelle chaîne "Hello"
+** ft_strdup(""); // renvoie un pointeur sur une nouvelle chaîne ""
+** ft_strdup(NULL); // comportement indéfini
+*/
 char	*ft_strdup(const char *s)
 {
 	char	*new_str;
