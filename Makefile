@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = rcs
 
-INCLUDES = -I./includes
+INCLUDES = -I includes/
 
 SRCS = sources/conv/ft_atoi.c \
        sources/conv/ft_itoa.c \
