@@ -51,11 +51,15 @@ SRCS = sources/conv/ft_atoi.c \
        sources/strings/ft_strtrim.c \
        sources/strings/ft_substr.c \
 
+HDR = includes/ft_printf.h \
+      includes/get_next_line.h \
+      includes/libft.h
+
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HDR)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 %.o: %.c
