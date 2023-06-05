@@ -16,6 +16,12 @@ SRCS = sources/conv/ft_atoi.c \
        sources/ctypes/ft_tolower.c \
        sources/ctypes/ft_toupper.c \
        sources/ctypes/ft_isspace.c \
+       sources/io/get_next_line.c \
+       sources/io/get_next_line_utils.c \
+       sources/io/printf/ft_printf.c \
+       sources/io/printf/printf_conversion.c \
+       sources/io/printf/printf_conversion2.c \
+       sources/io/printf/printf_function.c \
        sources/io/ft_putchar_fd.c \
        sources/io/ft_putendl_fd.c \
        sources/io/ft_putnbr_fd.c \
