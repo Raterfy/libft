@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:00:18 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/07 01:39:09 by robhak           ###   ########.fr       */
+/*   Updated: 2023/06/06 18:19:03 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,11 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
+}
+
+void	ft_putstr(char *s)
+{
+	if (!s)
+		return ;
+	write(1, s, ft_strlen(s));
 }

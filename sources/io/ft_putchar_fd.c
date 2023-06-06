@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 20:59:18 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/07 01:29:05 by robhak           ###   ########.fr       */
+/*   Updated: 2023/06/06 18:18:54 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,9 @@
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
