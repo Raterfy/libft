@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 13:25:26 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/07 00:10:59 by robhak           ###   ########.fr       */
+/*   Updated: 2023/06/06 17:57:32 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,29 @@ int	ft_atoi(const char *nptr)
 {
 	int	result;
 	int	sign;
+
+	result = 0;
+	sign = 1;
+	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
+	{
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
+	}
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		result = result * 10 + (*nptr - '0');
+		nptr++;
+	}
+	return (sign * result);
+}
+
+long long int	ft_long_atoi(const char *nptr)
+{
+	long long int	result;
+	long long int	sign;
 
 	result = 0;
 	sign = 1;

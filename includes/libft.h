@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 11:46:32 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/29 14:28:43 by robhak           ###   ########.fr       */
+/*   Updated: 2023/06/06 17:57:09 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_list
 }					t_list;
 
 int					ft_atoi(const char *nptr);
+long long int		ft_long_atoi(const char *nptr);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t nmemb, size_t n);
 int					ft_isalnum(int c);
