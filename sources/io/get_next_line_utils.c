@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 08:07:19 by robhak            #+#    #+#             */
-/*   Updated: 2023/06/02 09:59:50 by robhak           ###   ########.fr       */
+/*   Updated: 2023/12/28 21:17:09 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	{
 		copy_len = size - 1;
 		if (copy_len > src_len)
-		copy_len = src_len;
+			copy_len = src_len;
 		ft_memcpy(dst, src, copy_len);
 		dst[copy_len] = '\0';
 	}

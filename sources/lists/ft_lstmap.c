@@ -6,7 +6,7 @@
 /*   By: robhak <robhak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 21:13:33 by robhak            #+#    #+#             */
-/*   Updated: 2023/05/07 01:01:53 by robhak           ###   ########.fr       */
+/*   Updated: 2023/12/28 21:20:46 by robhak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 	qui permet de libérer le contenu des éléments en cas d'erreur.
 ** Elle vérifie si les paramètres sont valides, sinon elle renvoie NULL.
 ** Elle alloue de la mémoire pour chaque nouvel élément avec la fonction 
-	ft_lstnew et y copie le résultat de l'application de f au contenu de l'élément 
-		correspondant de la liste originale.
+	ft_lstnew et y copie le résultat de l'application de f au contenu 
+	de l'élément correspondant de la liste originale.
 ** Elle ajoute chaque nouvel élément à la fin de la nouvelle liste avec 
 	la fonction ft_lstadd_back.
 ** Si l'allocation échoue, elle supprime et libère la mémoire de tous 
